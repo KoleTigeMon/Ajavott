@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".PeaEkraan">
+
+    <item android:id="@+id/RESET" android:title="RESET"  />
+<!--
+    &lt;!&ndash;<item android:id="@+id/KP01" android:title="KP01 - Roosisaare sild" />&ndash;&gt;
+    <item android:id="@+id/KP0X" android:title="KP0X - Liikva sild" />
+    &lt;!&ndash;<item android:id="@+id/KP0A" android:title="KP0A - Kirumpää sild" />&ndash;&gt;
+    <item android:id="@+id/KP02" android:title="KP02 - Kääpa sild" />
+    &lt;!&ndash;<item android:id="@+id/KP0B" android:title="KP0B - Listaku sild" />&ndash;&gt;
+    &lt;!&ndash;<item android:id="@+id/KP03" android:title="KP03 - Paidra veskipais" />&ndash;&gt;
+    <item android:id="@+id/KP04" android:title="KP04 - Leevi HEJ" />
+    &lt;!&ndash;<item android:id="@+id/KP0C" android:title="KP0C - Süvahavva" />&ndash;&gt;
+    <item android:id="@+id/KP05" android:title="KP05 - Reo" />
+    &lt;!&ndash;<item android:id="@+id/KP0D" android:title="KP0D - Pindi sild" />&ndash;&gt;
+    &lt;!&ndash;<item android:id="@+id/KP0E" android:title="KP0E - Võuküla sild" />&ndash;&gt;
+    <item android:id="@+id/KP06" android:title="KP06 - Leevaku HEJ" />
+    <item android:id="@+id/KP0N" android:title="KP0N - Nulga sild" />
+    <item android:id="@+id/KP07" android:title="KP07 - Räpina HEJ" />
+    <item android:id="@+id/FINISH" android:title="FINISH - Võõpsu" />
+-->
+    <item android:id="@+id/KP0P" android:title="KP0P - Paide" />
+    <item android:id="@+id/KP00" android:title="KP00 - Veskisilla" />
+    <item android:id="@+id/KP01" android:title="KP01 - Jändja" />
+    <item android:id="@+id/KPRS" android:title="KPRS - Rae sild" />
+    <item android:id="@+id/KP02" android:title="KP02 - Kurgja" />
+    <item android:id="@+id/KP03" android:title="KP03 - Suurejõe" />
+    <item android:id="@+id/KP04" android:title="KP04 - Kure" />
+    <item android:id="@+id/KP05" android:title="KP05 - Jõesuu" />
+    <item android:id="@+id/TORI" android:title="TORI - Tori" />
+    <item android:id="@+id/SIND" android:title="SIND - Sindi" />
+</menu>
