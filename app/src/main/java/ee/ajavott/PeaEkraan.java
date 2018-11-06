@@ -301,7 +301,7 @@ public class PeaEkraan extends ActionBarActivity {
                                                 @Override
                                                 public void run() {
                                                     AlertDialog.Builder kpAlertBuilder = new AlertDialog.Builder(PeaEkraan.this);
-                                                    kpAlertBuilder.setMessage("ERROR: Disk is full, call Andi!!!");
+                                                    kpAlertBuilder.setMessage("ERROR: Disk full! To many boats on river, call to somehow and try to solve this. GSM: 5092491!!!");
                                                     kpAlertBuilder.setCancelable(true);
                                                     kpAlertBuilder.setPositiveButton("Not OK",
                                                             new DialogInterface.OnClickListener() {
@@ -411,7 +411,12 @@ public class PeaEkraan extends ActionBarActivity {
 
             synchronized (LOCK) {
 
-                unsentBoat.setIsBadBoatNumber();
+
+                if(errorText.startsWith("NO_NR")) {
+                    unsentBoat.setIsBadNoBoatNumber();
+                }else if(errorText.startsWith("EXIST")) {
+                    unsentBoat.setIsBadExistBoatNumber();
+                }
                 POPUP_BOATS.add(unsentBoat);
 
                 UNSENT_TIMES.remove(unsentBoat);
@@ -610,7 +615,9 @@ public class PeaEkraan extends ActionBarActivity {
 
             if(timedBoat != null) {
                 sentTimeTextView.setText(timedBoat.getBoat() + " " + timedBoat.getTime() + " " + timedBoat.getSelectedKP());
-                if(timedBoat.isBadBoatNumber()) {
+                if(timedBoat.isBadNoBoatNumber()) {
+                    sentTimeTextView.setTextColor(Color.parseColor("#ff7700"));
+                } else if(timedBoat.isBadExistBoatNumber()) {
                     sentTimeTextView.setTextColor(Color.parseColor("#ff0000"));
                 } else {
                     sentTimeTextView.setTextColor(Color.parseColor("#000000"));

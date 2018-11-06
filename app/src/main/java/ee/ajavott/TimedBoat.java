@@ -14,7 +14,8 @@ public class TimedBoat {
     private final String time;
     private final String selectedKp;
     private int retries = 50;
-    private boolean isBadBoatNumber = false;
+    private boolean isBadNoBoatNumber = false;
+    private boolean isBadExistBoatNumber = false;
     private boolean cancelled = false;
 
     public TimedBoat(final String boat, final String time, final String selectedKp) {
@@ -52,13 +53,21 @@ public class TimedBoat {
         return this.boat + " " + this.time + " " + this.selectedKp;
     }
 
-    public void setIsBadBoatNumber() {
-        this.isBadBoatNumber = true;
+    public void setIsBadNoBoatNumber() {
+        this.isBadNoBoatNumber = true;
+    }
+    public void setIsBadExistBoatNumber() {
+        this.isBadExistBoatNumber = true;
     }
 
-    public boolean isBadBoatNumber() {
-        return this.isBadBoatNumber;
+    public boolean isBadNoBoatNumber() {
+        return this.isBadNoBoatNumber;
     }
+
+    public boolean isBadExistBoatNumber() {
+        return this.isBadExistBoatNumber;
+    }
+
 
     public void setIsCancelled(boolean cancelled) {
         this.cancelled = cancelled;
